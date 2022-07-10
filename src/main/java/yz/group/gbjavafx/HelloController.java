@@ -24,7 +24,7 @@ public class HelloController {
 
     @FXML
     private TextField massage;
-
+//
 
     @FXML
     private TextArea outputText;

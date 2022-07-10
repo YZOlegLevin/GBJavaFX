@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yz.group.gbjavafx.HelloController">
+   <top>
+      <SplitPane prefHeight="46.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="79.0" layoutY="-1.0" style="-fx-background-color: #ffce00;" text="[ CHAT ]" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666666;" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="outputText" editable="false" layoutY="-11.0" prefHeight="200.0" prefWidth="200.0" promptText="Здесь будет ваша переписка" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextArea>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="217.0" prefWidth="142.0" style="-fx-background-color: #666666;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="56.0" layoutY="14.0" text="Контакты" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </Label>
+            <ListView layoutX="-30.0" layoutY="99.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666666;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="50.0" />
+               </padding>
+            </ListView>
+         </children>
+      </AnchorPane>
+   </left>
+   <bottom>
+      <SplitPane dividerPositions="0.8041294642857143" prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <items>
+            <TextField fx:id="massage" onAction="#massEnt" prefHeight="102.0" prefWidth="477.0" promptText="Сообщение..." style="-fx-background-color: #cdcdcd;">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="sendButton" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="51.0" prefWidth="179.0" style="-fx-background-color: #ffce00;" text="Отправить">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </items>
+      </SplitPane>
+   </bottom>
+</BorderPane>
